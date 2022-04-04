@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # my apps
     'applications.product',
+    'applications.account',
 
     # modules
     'rest_framework',
@@ -117,6 +118,7 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
+
 USE_I18N = True
 
 USE_TZ = True
@@ -134,3 +136,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+
+AUTH_USER_MODEL = 'account.CustomUser'
