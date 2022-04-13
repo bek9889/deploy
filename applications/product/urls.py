@@ -7,6 +7,8 @@ router = DefaultRouter()
 router.register('', ProductViewSet)
 
 urlpatterns = [
+    path('category/', CategoryListCreateView.as_view()),
+    path('category/<str:slug>/', CategoryRetriveDeleteUpdateView.as_view()),
     path('', include(router.urls)),
 
     # path('', ListCreateView.as_view()),
